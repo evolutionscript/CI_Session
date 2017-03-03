@@ -128,7 +128,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 			return FALSE;
 		}
 
-		$redis = new Redis();
+		$redis = new \Redis();
 		if ( ! $redis->connect($this->_config['save_path']['host'], $this->_config['save_path']['port'], $this->_config['save_path']['timeout']))
 		{
 
